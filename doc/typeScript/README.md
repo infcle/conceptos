@@ -35,3 +35,8 @@ Tambien podemos usar el siguiente comando para que automaticamente este generand
 ```
 tsc miarchivo.ts --watch
 ```
+### Ejecutar un archivo js con node.js
+```
+node miarchivo.js
+```
+
