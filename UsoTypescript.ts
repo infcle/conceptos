@@ -1,19 +1,15 @@
 // Variables
-import Movil from "$GLOBAL$";
-import Number from "$GLOBAL$";
-import Number from "$GLOBAL$";
-
-let mensaje = "Esto es un mensaje";
+let mensaje= "Esto es un mensaje";
 let mensaje2: string = "Esto es otro mensaje";
-let  numero1: number = 10;
+let numero1: number = 10;
 let verdadero:boolean = true;
 let numero2:number = 11;
 
 // POO en typeScript
 class Movil{
-  private marca!:String;
-  private puertas!:Number;
-  private ruedas!:Number;
+  private marca!: string;
+  private puertas!: number;
+  private ruedas!: number;
 
   // Uso de constructores
   constructor(marca:string, puertas:number, ruedas:number) {
@@ -56,10 +52,10 @@ console.log(movil1.getRuedas());
 
 // Herencia
 class Camion extends Movil{
-  carga:Number;
-  acoplado:boolean;
+  carga!: number;
+  acoplado!: boolean;
 
-  constructor(marca: string, puertas: number, ruedas: number, carga: Number, acoplado: boolean) {
+  constructor(marca: string, puertas: number, ruedas: number, carga: number, acoplado: boolean) {
     super(marca, puertas, ruedas);
     this.carga = carga;
     this.acoplado = acoplado;
