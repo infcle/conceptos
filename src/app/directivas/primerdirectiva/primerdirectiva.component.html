@@ -1,0 +1,60 @@
+<h2>Directivas</h2>
+<h3>Directivas de atributos</h3>
+<p [ngClass]="color == true ? 'text-1': 'text-2' ">
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+  when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+  It has survived not only five centuries, but also the leap into electronic typesetting,
+  remaining essentially unchanged. It was popularised in
+</p>
+
+<p [ngClass]="color == false ? 'text-1': 'text-2' ">
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+  when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+  It has survived not only five centuries, but also the leap into electronic typesetting,
+  remaining essentially unchanged. It was popularised in
+</p>
+
+<p [style.border]="border ? '2px solid black' : '2px solid blue' ">
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+  when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+  It has survived not only five centuries, but also the leap into electronic typesetting,
+  remaining essentially unchanged. It was popularised in
+</p>
+
+<p [style.border]="!border ? '2px solid black' : '2px solid blue' ">
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+  when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+  It has survived not only five centuries, but also the leap into electronic typesetting,
+  remaining essentially unchanged. It was popularised in
+</p>
+
+
+<h2>Directivas estructurales</h2>
+<ol>
+  <li *ngFor="let pais of Lista">
+    <div>{{pais}}</div>
+  </li>
+</ol>
+
+<ol>
+  <li *ngFor="let pais of Lista">
+    <div *ngIf="pais == 'Argentina'">{{pais}}</div>
+  </li>
+</ol>
+
+<div [ngSwitch]="Edad">
+  <div *ngSwitchCase="10">Tu edad es 10</div>
+  <div *ngSwitchCase="20">Tu edad es 20</div>
+  <div *ngSwitchCase="30">Tu edad es 30</div>
+  <div *ngSwitchDefault>Tu edad es otra</div>
+</div>
+
+
+<h2>Pipes</h2>
+<p>{{Fecha}}</p>
+<p>{{Fecha | date}}</p>
+<p>{{Fecha | date:'d/M/yyyy' }}</p>
